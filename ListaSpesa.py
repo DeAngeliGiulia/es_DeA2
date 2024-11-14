@@ -4,5 +4,9 @@ def aggiungi():
     for i in range(elementi):
         prodotto = input("Inserisci prodotto: ")
         lista.append(prodotto)
+
+def visualizza():
     print(lista)
+    
 aggiungi()
+visualizza()
