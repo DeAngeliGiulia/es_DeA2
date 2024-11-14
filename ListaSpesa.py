@@ -15,9 +15,12 @@ def elimina():
 def conta():
     print(len(lista))
     
+def svuota():
+    lista.clear()
+    print("Lista svuotata con successo!")
 
 while True:
-    scelta = int(input("0. Esci\n1. Aggiungi elemento\n2. Elimina elemento\n3. Visualizza lista\n4. Conta elementi "))
+    scelta = int(input("0. Esci\n1. Aggiungi elementi\n2. Elimina elemento\n3. Visualizza lista\n4. Conta elementi\n5. Svuota lista "))
     if scelta == 0:
         break
     elif scelta == 1:
@@ -27,6 +30,8 @@ while True:
     elif scelta == 3:
         visualizza()
     elif scelta == 4:
-        break
+        conta()
+    elif scelta == 5:
+        svuota()
     else:
         print("Opzione non valida")
