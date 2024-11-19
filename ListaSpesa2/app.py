@@ -3,8 +3,9 @@ from flask import Flask, render_template
 
 #inizializza l'app Flask
 app = Flask(__name__)
+lista_spesa = ["mele", "pere"]
 
-#rotta principale
+#route principale
 @app.route('/')
 def home():
     return render_template('index.html')
@@ -12,3 +13,4 @@ def home():
 #avvio dell'app Flask
 if __name__ == '__main__':
     app.run(debug=True)
+
