@@ -1,19 +1,29 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <h1>La tua Lista della Spesa</h1>
-        {% if lista_spesa %}
-            <ul>
-                {% for elemento in lista-spesa %}
-                    <li>{{ elemento }}</li>
-                {% endfor %}
-            </ul>
-        {% else %}
-            <p>La lista è vuota.</p>
-        {% endif %}
-    </body>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista della Spesa</title>
+</head>
+<body>
+    <h1>La tua Lista della Spesa</h1>
+    <form action="/aggiungi" method="post">
+        <input type="text" name="elemento" placeholder="Aggiungi un elemento" required>
+        <button type="submit">Aggiungi</button>
+    </form>
+    {% if lista_spesa %}
+        <ul>
+        {% for elemento in lista_spesa %}
+            <li>
+                {{ elemento }}
+                <a href="/rimuovi/{{ loop.index0 }}">
+                    <button type="button">Rimuovi</button>
+                </a>
+            </li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>La lista è vuota.</p>
+    {% endif %}
+</body>
 </html>
