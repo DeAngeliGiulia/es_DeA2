@@ -7,18 +7,21 @@
 </head>
 <body>
     <h1>La tua Lista della Spesa</h1>
+    
+    <!-- Form per aggiungere un nuovo elemento -->
     <form action="/aggiungi" method="post">
         <input type="text" name="elemento" placeholder="Aggiungi un elemento" required>
         <button type="submit">Aggiungi</button>
     </form>
+
     {% if lista_spesa %}
         <ul>
         {% for elemento in lista_spesa %}
             <li>
                 {{ elemento }}
-                <a href="/rimuovi/{{ loop.index0 }}">
-                    <button type="button">Rimuovi</button>
-                </a>
+                <form action="/rimuovi/{{ loop.index0 }}" method="post" style="display:inline;">
+                    <button type="submit">Rimuovi</button>
+                </form>
             </li>
         {% endfor %}
         </ul>
