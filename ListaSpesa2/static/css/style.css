@@ -2,7 +2,28 @@
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    align-items: center;
 }
 .aggiungi{
-    background-color: rgb(25, 219, 0);
+    background-color: rgb(85, 193, 255);
+    font-size: large;
+}
+.rimuovi{
+    background-color: rgb(0, 102, 219);
+    float: right;
+    padding: 15px;
+    border-radius: 5px;
+}
+.svuota{
+    background-color: rgb(0, 128, 233);
+    margin-top: 20px;
+}
+.prodotto{
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    padding: 15px;
+}
+.elemento{
+    float: left;
 }

@@ -17,21 +17,23 @@
         </form>
 
         {% if lista_spesa %}
-            <ul>
+            <ul style="margin-left: auto;">
             {% for elemento in lista_spesa %}
-                <li>
-                    {{ elemento }}
-                    <form action="/rimuovi/{{ loop.index0 }}" method="post" style="display:inline;">
-                        <button type="submit">Rimuovi</button>
-                    </form>
-                </li>
+                <div class="prodotto"><br>
+                    <div class="elemento">
+                        {{ elemento.elemento }}
+                    </div>
+                        <form action="/rimuovi/{{ elemento.id }}" method="post" style="display:inline;">
+                            <button type="submit" class="rimuovi">Rimuovi</button>
+                        </form>
+                </div>
             {% endfor %}
             </ul>
         {% else %}
             <p>La lista è vuota.</p>
         {% endif %}
         <form action="/svuota" method="post">
-            <button type="submit">Svuota lista</button>
+            <button type="submit" class="svuota">Svuota lista</button>
         </form>
     </div>  
 </body>
