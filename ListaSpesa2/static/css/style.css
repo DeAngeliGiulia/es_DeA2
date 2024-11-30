@@ -3,27 +3,58 @@
     margin-right: auto;
     text-align: center;
     align-items: center;
+    width: 60%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: rgb(255, 245, 216);
+    border: 3px solid rgb(248, 191, 36);
+}
+.placeholder{
+    padding: 10px;
+    border-radius: 5px;
+    font-size: large;
+    text-align: center;
+    border: 2px solid rgb(248, 191, 36);
 }
 .aggiungi{
-    background-color: rgb(85, 193, 255);
-    font-size: large;
-}
-.rimuovi{
-    background-color: rgb(0, 102, 219);
-    float: right;
-    padding: 15px;
+    background-color: rgb(173, 241, 190);
+    color: rgb(0, 148, 37);
+    border: 2px solid rgb(0, 148, 37);
+    font-size: larger;
+    padding: 10px;
     border-radius: 5px;
 }
-.svuota{
-    background-color: rgb(0, 128, 233);
-    margin-top: 20px;
+.rimuovi{
+    background-color: rgb(255, 184, 171);
+    color: rgb(201, 30, 0);
+    border: 2px solid rgb(201, 30, 0);
+    float: right;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: large;
 }
-.prodotto{
+.svuota{
+    background-color: rgb(175, 26, 0);
+    color: rgb(255, 184, 171);
+    border: 2px solid rgb(255, 184, 171);
+    margin-top: 50px;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: larger;
+}
+.elemento{
     margin-left: auto;
     margin-right: auto;
     width: 40%;
-    padding: 15px;
+    padding: 20px;
 }
-.elemento{
+.prodotto{
     float: left;
+    padding-top: 10px;
+    font-size: large;
+}
+.vuota{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
 }

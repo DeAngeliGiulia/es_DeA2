@@ -12,15 +12,15 @@
         
         <!-- Form per aggiungere un nuovo elemento -->
         <form action="/aggiungi" method="post" >
-            <input type="text" name="elemento" placeholder="Aggiungi un elemento" required>
+            <input type="text" name="elemento" class="placeholder" placeholder="Aggiungi un elemento" required>
             <button type="submit" class="aggiungi">Aggiungi</button>
         </form>
 
         {% if lista_spesa %}
-            <ul style="margin-left: auto;">
+            <ul">
             {% for elemento in lista_spesa %}
-                <div class="prodotto"><br>
-                    <div class="elemento">
+                <div class="elemento"><br>
+                    <div class="prodotto">
                         {{ elemento.elemento }}
                     </div>
                         <form action="/rimuovi/{{ elemento.id }}" method="post" style="display:inline;">
@@ -30,7 +30,7 @@
             {% endfor %}
             </ul>
         {% else %}
-            <p>La lista è vuota.</p>
+            <p class="vuota"">La lista è vuota</p>
         {% endif %}
         <form action="/svuota" method="post">
             <button type="submit" class="svuota">Svuota lista</button>
